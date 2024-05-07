@@ -61,7 +61,7 @@ class eTraM(EventDataModule):
             else:
                 timestamp_dict.add(t_bbox)
 
-            t_start = t_bbox - 500_000 + 1_000 # .5s
+            t_start = t_bbox - 400_000 + 1_000 # .5s
             t_end = t_bbox
             bbox_mask = np.logical_and(t_start < bounding_boxes['t'], bounding_boxes['t'] <= t_end) ### Technically train and evaluate @ t_bbox, graph level prediction
 
@@ -160,7 +160,6 @@ class eTraM(EventDataModule):
     # Files #################################################################################################
     #########################################################################################################
     def raw_files(self, mode: str) -> List[str]:
-        print(self.root, mode)
         return glob.glob(os.path.join(self.root, mode, "*_td.dat"))
 
     def processed_files(self, mode: str) -> List[str]:

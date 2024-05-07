@@ -1,11 +1,11 @@
+import torchvision
 import argparse
 import pytorch_lightning as pl
 import torch
-import torch, mmcv, mmdet
+import torch
 import sys
 
 
-print(sys.path)
 sys.path.append('/media/exx/data/aayush/eTraM_work/github/eTraM/aegnn_eTraM')
 
 
