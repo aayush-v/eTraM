@@ -3,6 +3,7 @@ from aegnn.datasets.base.event_dm import EventDataModule
 from aegnn.datasets.ncaltech101 import NCaltech101
 from aegnn.datasets.ncars import NCars
 from aegnn.datasets.gen1 import Gen1
+from aegnn.datasets.etram import eTraM
 
 
 ################################################################################################
@@ -15,5 +16,7 @@ def by_name(name: str) -> EventDataModule.__class__:
         return NCars
     elif name.lower() == "gen1":
         return Gen1
+    elif name.lower() == "etram":
+        return eTraM
     else:
         raise NotImplementedError(f"Dataset with name {name} is not known!")

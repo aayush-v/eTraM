@@ -5,9 +5,8 @@ import torch, mmcv, mmdet
 import sys
 
 
-print(sys.path[0])
-sys.path.append('/media/exx/data/aayush/graph_networks/gh/AEGNN/forked_aegnn/aegnn-tlwzzy')
-
+print(sys.path)
+sys.path.append('/media/exx/data/aayush/eTraM_work/github/eTraM/aegnn_eTraM')
 
 
 import aegnn
